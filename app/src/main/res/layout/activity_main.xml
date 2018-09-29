@@ -71,7 +71,7 @@
                 android:id="@+id/loginbutton"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
-                android:layout_margin="22dp"
+                android:layout_margin="13dp"
                 android:background="#d67601"
                 android:text="@string/button"
                 android:textAllCaps="false"
@@ -82,12 +82,21 @@
                 android:id="@+id/seebillbutton"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
-                android:layout_margin="22dp"
+                android:layout_margin="13dp"
                 android:background="#d67601"
                 android:text="@string/buttonforcommon"
                 android:textAllCaps="false"
                 android:textColor="#fff"
                 android:textSize="18sp" />
+            <TextView
+                android:layout_margin="13dp"
+                android:textAllCaps="false"
+                android:textColor="#fff"
+                android:textSize="18sp"
+                android:background="#d67601"
+                android:text="@string/help"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content" />
         </LinearLayout>
     </RelativeLayout>
 

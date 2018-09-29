@@ -9,6 +9,10 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
+    <include
+        layout="@layout/toolbar_layout"></include>
+
+
     <LinearLayout
         android:orientation="horizontal"
         android:layout_width="match_parent"
