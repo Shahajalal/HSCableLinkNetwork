@@ -1,0 +1,27 @@
+<resources>
+    <string name="app_name">এইস এস ক্যাবল লিংক নেটওয়ার্ক</string>
+    <string name="firsttextView">লগইন করুন</string>
+    <string name="button">চাপুন</string>
+    <string name="buttonforcommon">আপনার বিল দেখুন</string>
+    <string name="userhint">গ্রাহকের নাম</string>
+    <string name="adminhing">মালিকের নাম</string>
+    <string name="passwordhint">পিন</string>
+    <string name="userinfotextname">গ্রাহকের তথ্য দিন</string>
+    <string name="username">গ্রাহকের নাম দিন</string>
+    <string name="userfathername">গ্রাহকের পিতার নাম দিন</string>
+    <string name="uservillage">গ্রাহকের গ্রামের নাম দিন</string>
+    <string name="userbilltextname">গ্রাহকের বিল দিন</string>
+    <string name="monthlycharge">মাসিক চার্জ</string>
+    <string name="givenamoutn">জমার পরিমান</string>
+    <string name="userinfotext">আপনার তথ্য দেখুন</string>
+    <string name="seeuserbtntxt">গ্রাহক দেখুন</string>
+    <string name="month">মাসের নাম</string>
+    <string name="charge">মাসিক চার্জ</string>
+    <string name="given">জমার পরিমাণ</string>
+    <string name="owoings">বকেয়া</string>
+    <string name="totalbillbtn">মোট চার্জ</string>
+
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>
