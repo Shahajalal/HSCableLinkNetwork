@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#5fb0c9"
@@ -31,6 +32,7 @@
         android:padding="20dp">
 
         <LinearLayout
+            android:weightSum="5"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical"
@@ -38,7 +40,8 @@
 
             <android.support.design.widget.TextInputLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content">
+                android:layout_weight="1"
+                android:layout_height="0dp">
 
                 <android.support.v7.widget.AppCompatEditText
                     android:id="@+id/adminusername"
@@ -53,7 +56,8 @@
 
             <android.support.design.widget.TextInputLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content">
+                android:layout_weight="1"
+                android:layout_height="0dp">
 
                 <android.support.v7.widget.AppCompatEditText
                     android:id="@+id/adminpassword"
@@ -70,7 +74,8 @@
             <Button
                 android:id="@+id/loginbutton"
                 android:layout_width="fill_parent"
-                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_height="0dp"
                 android:layout_margin="13dp"
                 android:background="#d67601"
                 android:text="@string/button"
@@ -81,7 +86,8 @@
             <Button
                 android:id="@+id/seebillbutton"
                 android:layout_width="fill_parent"
-                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_height="0dp"
                 android:layout_margin="13dp"
                 android:background="#d67601"
                 android:text="@string/buttonforcommon"
@@ -96,7 +102,8 @@
                 android:background="#d67601"
                 android:text="@string/help"
                 android:layout_width="fill_parent"
-                android:layout_height="wrap_content" />
+                android:layout_weight="1"
+                android:layout_height="0dp"/>
         </LinearLayout>
     </RelativeLayout>
 

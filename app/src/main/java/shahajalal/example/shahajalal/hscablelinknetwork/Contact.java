@@ -1,4 +1,4 @@
-package com.example.shahajalal.hscablelinknetwork;
+package shahajalal.example.shahajalal.hscablelinknetwork;
 
 public class Contact {
     String name,fathername,village;

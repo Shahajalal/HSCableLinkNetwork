@@ -1,5 +1,6 @@
-package com.example.shahajalal.hscablelinknetwork;
+package shahajalal.example.shahajalal.hscablelinknetwork;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
@@ -8,6 +9,7 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.RelativeLayout;
 import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -18,6 +20,11 @@ import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
+import com.google.android.gms.ads.AdListener;
+import com.google.android.gms.ads.AdRequest;
+import com.google.android.gms.ads.AdSize;
+import com.google.android.gms.ads.AdView;
+import com.google.android.gms.ads.InterstitialAd;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -30,12 +37,26 @@ public class UserPanel extends AppCompatActivity {
     private Button btn,btn1;
     private String spin1,spin2;
     private Spinner spinner,spinner2;
+    private InterstitialAd interstitialAd;
     private static final String[] paths = {"জানুয়ারী", "ফেব্রুয়ারি", "মার্চ","এপ্রিল","মে","জুন","জুলাই","আগস্ট","সেপ্টেম্বর","অক্টোবর","নভেম্বর","ডিসেম্বর"};
     private static final String[] paths1 = {"২০১৮", "২০১৯", "২০২০","২০২১","২০২২","২০২৩","২০২৪","২০২৫"};
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_user_panel);
+
+
+        interstitialAd=new InterstitialAd(this);
+        interstitialAd.setAdUnitId("ca-app-pub-5871362448692559/7472997545");
+        interstitialAd.loadAd(new AdRequest.Builder().build());
+        interstitialAd.setAdListener(new AdListener()
+                                     {
+                                         @Override
+                                         public void onAdClosed() {
+                                             interstitialAd.loadAd(new AdRequest.Builder().build());
+                                         }
+                                     }
+        );
 
         username=findViewById(R.id.showforusernameid);
         textView=findViewById(R.id.seeresulttxtid);
@@ -166,27 +187,35 @@ public class UserPanel extends AppCompatActivity {
         btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                String name=username.getText().toString();
-                String userfather=userfathername.getText().toString();
-                if(!name.equals("") && !userfather.equals("")){
-                    searchvalue(name,userfather,spin1,spin2);
-                }else{
-                    Toast.makeText(getApplicationContext(),"সব ঘর পুরন করুন",Toast.LENGTH_SHORT).show();
+                if(interstitialAd.isLoaded()){
+                    interstitialAd.show();
+                }
+                String name = username.getText().toString();
+                String userfather = userfathername.getText().toString();
+                if (!name.equals("") && !userfather.equals("")) {
+                    searchvalue(name, userfather, spin1, spin2);
+                    } else {
+                        Toast.makeText(getApplicationContext(), "সব ঘর পুরন করুন", Toast.LENGTH_SHORT).show();
+                    }
                 }
 
-            }
+
         });
         btn1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                String name=username.getText().toString();
-                String userfather=userfathername.getText().toString();
-                if(!name.equals("") && !userfather.equals("")) {
-                    totalbill(name, userfather);
-                }else{
-                    Toast.makeText(getApplicationContext(),"সব ঘর পুরন করুন",Toast.LENGTH_SHORT).show();
+                if(interstitialAd.isLoaded()){
+                    interstitialAd.show();
                 }
-            }
+                    String name = username.getText().toString();
+                    String userfather = userfathername.getText().toString();
+                    if (!name.equals("") && !userfather.equals("")) {
+                        totalbill(name, userfather);
+                    } else {
+                        Toast.makeText(getApplicationContext(), "সব ঘর পুরন করুন", Toast.LENGTH_SHORT).show();
+                    }
+                }
+
         });
 
     }

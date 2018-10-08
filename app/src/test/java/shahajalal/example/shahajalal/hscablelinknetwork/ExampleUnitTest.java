@@ -1,4 +1,4 @@
-package com.example.shahajalal.hscablelinknetwork;
+package shahajalal.example.shahajalal.hscablelinknetwork;
 
 import org.junit.Test;
 
